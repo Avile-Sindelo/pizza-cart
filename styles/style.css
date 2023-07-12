@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Courgette&family=Dancing+Script:wght@600&family=Kalam&family=Rubik+Iso&family=Smokum&family=Stick+No+Bills:wght@300;500&display=swap');
+
+body{
+	background-color: #C6EBC5;
+	background-image: url('../images/background1.jpg');
+	background-size: contain;
+	background-attachment: fixed;
+	margin: 5%;
+}
+
+p{
+	font-size: 80%;
+	font-family: 'Kalam', cursive;
+	color: whitesmoke;
+	text-shadow: 1px 1px 1px #1E6F5C;
+}
+
+h1{
+	text-align: center;
+	font-family: 'Rubik Iso', cursive;
+	color: beige;
+	text-shadow: 3px 4px 2px #31AA75;
+	letter-spacing: 5px;
+}
+
+h3{
+	padding: 0 0 0 10%;
+	font-family: 'Cinzel', cursive;
+	color: #5AA469;
+	text-shadow: 1px 1px 1px EFB08C;
+}
+
+.clearfix{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+#company-name{
+	border: 1px solid #EF6C57;
+}
+
+#container{
+	display: flex;
+}
+
+#footer{
+	color: whitesmoke;
+}
+
+#small-pizza{
+	background-color: #F2F2F2;
+}
+
+#small-pizza:hover{
+	background-color: transparent;
+	border: 2px ridge #F2F2F2;
+	color: whitesmoke;
+}
+
+#medium-pizza{
+	background-color: #FFCDA3;
+}
+
+#medium-pizza:hover{
+	background-color: transparent;
+	border: 2px ridge #FFCDA3;
+}
+
+#large-pizza{
+	background-color: #7ED3B2;
+}
+
+#large-pizza:hover{
+	background-color: transparent;
+	border: 2px ridge #7ED3B2;
+}
+
+#footer{
+	background-color: #EF6C57;
+}
+
+.pizza-div:hover{
+	scale: 1.02;
+	transition: 0.5s;
+}
+
+.pizza-text{
+	padding: 5%;
+}
+
+.pizza-img{
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin: 5%;
+}
+
+.footer-text{
+	font-family: 'Stick No Bills', sans-serif;
+	font-size: 130%;
+	color: #7ED3B2;
+}
+
+@media screen and (max-width: 350px){
+	#container{
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.pizza-img{
+		float: right;
+		width: 150px;
+		height: 150px;
+		shape-outside: ellipse();
+	}
+
+	.footer-text{
+		font-size: 90%;
+	}
+
+	#small-pizza{
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 351px) and (max-width: 720px){
+	#container{
+		flex-direction: column;
+	}
+
+	.pizza-img{
+		shape-outside: ellipse();
+	}
+
+	#footer{
+		display: flex;
+		flex-direction: row;
+	}
+}
