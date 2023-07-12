@@ -102,6 +102,10 @@ h3{
 	color: #7ED3B2;
 }
 
+#cart{
+	background-color: crimson;
+}
+
 @media screen and (max-width: 350px){
 	#container{
 		flex-direction: column;
