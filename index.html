@@ -55,8 +55,8 @@
 			<!-- Payment div -->
 			<div id="payment-div" x-show="checkedOut">
 				<span>Enter payment amount : </span>
-				<input id="payment-input" type="number" >
-				<button id="payBtn" x-on:click="handlePayment">Pay</button>
+				<input id="payment-input" type="number" x-model="enteredAmount">
+				<button id="payBtn" x-on:click="handlePayment(enteredAmount)">Pay</button>
 			</div>
 		</div>
 		<div class="col-4"></div>

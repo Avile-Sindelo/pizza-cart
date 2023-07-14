@@ -9,6 +9,7 @@ function Cart(){
         largePizzaTotal: 0,
         checkedOut: false,
         showMessage: false,
+        enteredAmount: '',
         message: 'This message is from the Factory!!!',
         orderSmall: function(){
             this.smallPizzaTotal += 49.00;
@@ -50,8 +51,7 @@ function Cart(){
             this.checkedOut = true;
             this.showMessage = false;
         },
-        handlePayment: function(){
-            var enteredAmount = document.querySelector('#payment-input').value;
+        handlePayment: function(enteredAmount){
             if(this.totalAmountDue <= enteredAmount){
                 this.message = 'Enjoy your Pizzas!!';
                 this.clearCart();
@@ -78,20 +78,3 @@ function Cart(){
         }
     }
 }
-
-//These go to the testing facility on Mocha and Chai
-let sampleCart = Cart();
-console.log('Total for small pizzas : ', sampleCart.smallPizzaTotal);
-console.log('Total Amount Due BEFORE any order was made : ', sampleCart.totalAmountDue);
-sampleCart.orderSmall();
-console.log('Total for small pizzas', sampleCart.smallPizzaTotal);
-sampleCart.orderLarge();
-sampleCart.orderLarge();
-sampleCart.orderLarge();
-console.log('Total for large pizzas', sampleCart.largePizzaTotal);
-
-
-
-
-
-console.log('Total Amount Due AFTER all orders were made : ', sampleCart.totalAmountDue);
