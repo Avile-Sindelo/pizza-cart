@@ -55,7 +55,7 @@ function Cart(){
             if(this.totalAmountDue <= enteredAmount){
                 this.message = 'Enjoy your Pizzas!!';
                 this.clearCart();
-            } else { this.message = 'Sorry - that was not enough to complete the transaction.'}
+            } else { this.message = 'Sorry - that is not enough money.'}
             
             setTimeout(()=>{
                 this.showMessage = true;

@@ -106,6 +106,36 @@ h3{
 	background-color: crimson;
 }
 
+.total{
+	color: beige;
+}
+
+.orderBtn{
+	border: none;
+	padding: 2% 10%;
+	margin: 0 0 5% 30%;
+	background-color: cadetblue;
+	border-radius: 5px;
+	font-weight: 800;
+}
+
+.orderBtn:hover{
+	color: beige;
+	transition: ease .5s;
+	background-color: seagreen;
+	border-radius: 0px;
+}
+
+#checkout{
+	margin: 5% 0 5% 35%;
+	padding: 2% 10%;
+	font-weight: 800;
+	background-color: #333;
+	border: none;
+	border-radius: 5px;
+	color: beige;
+}
+
 @media screen and (max-width: 350px){
 	#container{
 		flex-direction: column;
