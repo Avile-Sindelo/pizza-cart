@@ -10,41 +10,41 @@ function Cart(){
         checkedOut: false,
         showMessage: false,
         enteredAmount: '',
-        message: 'This message is from the Factory!!!',
+        message: '',
         orderSmall: function(){
-            this.smallPizzaTotal += 49.00;
+           (this.smallPizzaTotal += 49.00).toFixed(2);
             this.smallPizzasOrdered++;
-            this.totalAmountDue += 49.00;
+            (this.totalAmountDue += 49.00).toFixed(2);
             this.checkedOut = false;
         },
         orderMedium: function(){
-            this.mediumPizzaTotal += 89.00;
+            (this.mediumPizzaTotal += 89.00).toFixed(2);
             this.mediumPizzasOrdered++;
-            this.totalAmountDue += 89.00;
+            (this.totalAmountDue += 89.00).toFixed(2);
             this.checkedOut = false;
         },
         orderLarge: function(){
-            this.largePizzaTotal += 129.00;
+            (this.largePizzaTotal += 129.00).toFixed(2);
             this.largePizzasOrdered++;
-            this.totalAmountDue += 129.00;
+            (this.totalAmountDue += 129.00).toFixed(2);
             this.checkedOut = false;
         },
         decrementSmall: function(){
-            this.smallPizzaTotal -= 49.00;
+            (this.smallPizzaTotal -= 49.00).toFixed(2);
             this.smallPizzasOrdered--;
-            this.totalAmountDue -= 49.00;
+            (this.totalAmountDue -= 49.00).toFixed(2);
             this.checkedOut = false;
         },
         decrementMedium: function(){
-            this.mediumPizzaTotal -= 89.00;
+            (this.mediumPizzaTotal -= 89.00).toFixed(2);
             this.mediumPizzasOrdered--;
-            this.totalAmountDue -= 89.00;
+            (this.totalAmountDue -= 89.00).toFixed(2);
             this.checkedOut = false;
         },
         decrementLarge: function(){
-            this.largePizzaTotal -= 129.00;
+            (this.largePizzaTotal -= 129.00).toFixed(2);
             this.largePizzasOrdered--;
-            this.totalAmountDue -= 129.00;
+            (this.totalAmountDue -= 129.00).toFixed(2);
             this.checkedOut = false;
         },
         checkout: function(){

@@ -136,6 +136,10 @@ h3{
 	color: beige;
 }
 
+[x-cloak]{
+	display: none !important;
+}
+
 @media screen and (max-width: 350px){
 	#container{
 		flex-direction: column;

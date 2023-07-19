@@ -23,21 +23,21 @@
 		<div class="col-4" >
 			<div class="row">
 				<div class="col-3">Small</div>
-				<div class="col-3"><button class="incrementBtn" x-on:click="orderSmall">+</button></div>
+				<div class="col-3"><button class="incrementBtn" x-on:click="smallPizzaTotal > 0? orderSmall : smallPizzaTotal = 0">+</button></div>
 				<div class="col-3"><button class="decrementBtn" x-on:click="smallPizzaTotal > 0? decrementSmall : smallPizzaTotal = 0">-</button></div>
 				<div class="col-3">R<span class="total" x-text="smallPizzaTotal"></span></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3">Medium</div>
-				<div class="col-3"><button class="incrementBtn" x-on:click="orderMedium">+</button></div>
+				<div class="col-3"><button class="incrementBtn" x-on:click="mediumPizzaTotal > 0? orderMedium : mediumPizzaTotal = 0">+</button></div>
 				<div class="col-3"><button class="decrementBtn" x-on:click="mediumPizzaTotal > 0? decrementMedium : mediumPizzaTotal = 0">-</button></div>
 				<div class="col-3">R<span class="total" x-text="mediumPizzaTotal"></span></div>
 			</div>
 
 			<div class="row">
 				<div class="col-3">Large</div>
-				<div class="col-3"><button class="incrementBtn" x-on:click="orderLarge">+</button></div>
+				<div class="col-3"><button class="incrementBtn" x-on:click="largePizzaTotal > 0? orderLarge : largePizzaTotal = 0">+</button></div>
 				<div class="col-3"><button class="decrementBtn" x-on:click="largePizzaTotal > 0? decrementLarge : largePizzaTotal = 0">-</button></div>
 				<div class="col-3">R<span class="total" x-text="largePizzaTotal"></span></div>
 			</div>
@@ -49,11 +49,11 @@
 				<div class="col-3">R<span class="total" id="amount-due-span" x-text="totalAmountDue"></span></div>
 			</div>
 
-			<button id="checkout" x-show="totalAmountDue <= 0 ? false : true" x-on:click="checkout">Check Out</button>
+			<button id="checkout" x-cloak x-show="totalAmountDue <= 0 ? false : true" x-on:click="checkout">Check Out</button>
 			<!--- Message element -->
-			<h3 id="messge" x-show="showMessage" x-text="message"></h3>
+			<h3 id="messge" x-cloak x-show="showMessage" x-text="message"></h3>
 			<!-- Payment div -->
-			<div id="payment-div" x-show="checkedOut">
+			<div id="payment-div" x-cloak x-show="checkedOut">
 				<span>Enter payment amount : </span>
 				<input id="payment-input" type="number" x-model="enteredAmount">
 				<button id="payBtn" x-on:click="handlePayment(enteredAmount)">Pay</button>
